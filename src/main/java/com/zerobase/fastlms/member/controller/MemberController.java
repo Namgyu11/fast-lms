@@ -9,6 +9,7 @@ import com.zerobase.fastlms.member.model.MemberInput;
 import com.zerobase.fastlms.member.model.ResetPasswordInput;
 import com.zerobase.fastlms.member.service.MemberService;
 import com.zerobase.fastlms.util.PasswordUtils;
+import com.zerobase.fastlms.util.RequestUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +29,10 @@ public class MemberController {
     private final TakeCourseService takeCourseService;
     
     @RequestMapping("/member/login")
-    public String login() {
-        
+    public String login(HttpServletRequest request) {
+        String userAgent = RequestUtils.getUserAgent(request); // 접속 UserAgent
+        String clientIp = RequestUtils.getClientIP(request); // Client IP
+
         return "member/login";
     }
     

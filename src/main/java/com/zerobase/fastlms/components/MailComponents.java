@@ -20,7 +20,7 @@ public class MailComponents {
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo("satcop@naver.com");
         msg.setSubject("안녕하세요. 제로베이스 입니다.");
-        msg.setText(" 안녕하세요. 제로베이스 입니다. 방갑습니다. ");
+        msg.setText(" 안녕하세요. 제로베이스 입니다. 반갑습니다. ");
         
         javaMailSender.send(msg);
     }
