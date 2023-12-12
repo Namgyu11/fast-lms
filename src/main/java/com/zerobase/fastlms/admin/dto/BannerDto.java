@@ -30,10 +30,17 @@ public class BannerDto {
     long totalCount;
     long seq;
 
-    public static BannerDto toBanner(Banner banner){
+    public static BannerDto toBanner(Banner banner) {
         return BannerDto.builder()
                 .id(banner.getId())
                 .bannerName(banner.getBannerName())
+                .bannerUrl(banner.getBannerUrl())
+                .openCase(banner.getOpenCase())
+                .sortNum(banner.getSortNum())
+                .showYn(banner.isShowYn())
+                .regDt(banner.getRegDt())
+                .fileName(banner.getFileName())
+                .urlFileName(banner.getUrlFileName())
                 .build();
     }
 }
