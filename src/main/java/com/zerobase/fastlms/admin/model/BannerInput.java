@@ -17,7 +17,9 @@ public class BannerInput {
     boolean showYn; // 공개 여부
 
     LocalDateTime regDt;
+    String fileName;
     String urlFileName;
+
 
     String idList;
 
